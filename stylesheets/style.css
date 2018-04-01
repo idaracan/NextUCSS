@@ -1,0 +1,157 @@
+body
+{
+  font-family: 'Dancing Script', cursive;
+  background-color: #02010a;
+}
+#contenido
+{
+  max-width: 900px;
+  margin: auto;
+  animation: slidein 1s;
+}
+#contenido .links a
+{
+  color: white;
+}
+@-webkit-keyframes slidein
+{
+    0% {margin-top: 150%}
+    60% {margin-top: -5px;}
+    100% {margin-top: 0px;}
+}
+@keyframes slidein
+{
+    0% {margin-top: 150%}
+    60% {margin-top: -5px;}
+    100% {margin-top: 0px;}
+}
+header
+{
+  height: 4.3em;
+  background-color: #5b7989;
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  border-radius: 10px 10px 0px 0px;
+}
+header h1
+{
+  font-size: 2em;
+  float: left;
+  display: block;
+  margin-bottom: 10px;
+}
+header .links
+{
+  float: right;
+  padding: 10px;
+  display: block;
+  font-size: 2em;
+}
+img
+{
+  box-shadow: 2px 2px #02010a;#
+}
+.centralImg
+{
+  background-color: #82c3a6;
+  padding-bottom: 10%;
+  padding-top: 10%;
+}
+.centralImg picture img
+{
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+.bottomImages
+{
+  width: 100%;
+  padding: 10% 0;
+  background-color: #d5c75f;
+  display: flex;
+  flex-flow: row;
+}
+.gallery
+{
+  flex-flow: row wrap;
+}
+.bottomImages picture
+{
+  height: 100%;
+  text-align: center;
+}
+.bottomImages picture img
+{
+  display: block;
+  margin: auto;
+  width: 80%;
+  transition: 1s;
+}
+.gallery picture img
+{
+  margin: 5% auto;
+}
+.bottomImages picture img[class='Paisaje']:hover
+{
+  transform: rotate(10deg);
+  border: 2px solid black;
+  box-shadow: 2px 2px #82c3a6;
+  animation-duration: 1s;
+}
+.bottomImages picture img[class='Retrato']:hover
+{
+  transform: translate(20px,-5px);
+  border: 2px solid black;
+  box-shadow: 2px 2px #82c3a6;
+  animation-duration: 1s;
+}
+section[class*='gallery'] picture img
+{
+  max-width: 300px;
+}
+#blur
+{
+  filter: blur(10px);
+}
+#grises
+{
+  filter: grayscale(100%);
+}
+#sepia
+{
+  filter: sepia(90%);
+}
+footer
+{
+  width: 100%;
+  background-color: #C6d5c5;
+  color: black;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  flex-flow: row;
+  padding-bottom: 5%;
+}
+footer section
+{
+  width: 20%;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 900px)
+{
+  header
+  {
+    height: 8em;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  .bottomImages
+  {
+    flex-flow: column;
+  }
+  footer
+  {
+    flex-flow: column;
+  }
+}
